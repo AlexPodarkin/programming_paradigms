@@ -11,10 +11,9 @@ for i in range(1, n + 1):
     for k in range(1, 10):
         print(f'{i} * {k} = {i * k}')
 
+# Буду использовать если код повторяется
 print('\nСтруктурная + процедурная:')
 
-
-# Буду использовать если код повторяется
 
 def multiplication_table(j):
     for b in range(1, j + 1):
