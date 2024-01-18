@@ -24,7 +24,6 @@ def multiplication_table(j):
 
 multiplication_table(n)
 
-# Буду использовать если код не повторяется и мне важна скорость выполнения
+# Буду использовать если мне важна скорость выполнения
 print('\nТипа декларативный стиль:')
-res = [f'{i} * {k} = {i * k}\n' for i in range(1, n + 1) for k in range(1, 10)]
-print(''.join(res))
+print(''.join([f'{i} * {k} = {i * k}\n' for i in range(1, n + 1) for k in range(1, 10)]))
