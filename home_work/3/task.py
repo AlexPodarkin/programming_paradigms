@@ -33,13 +33,14 @@ class TicTacToe:
         return None
 
 
-game = TicTacToe()
-print('Игра: крестики нолики')
-print('Перед вами поле 3*3, и номера позиций, выбирайте, первый ходит "X" ')
-for index_g, el_g in enumerate(range(9)):
-    print(f'{el_g + 1}', end='|')
-    if index_g in (2, 5, 8):
-        print("\b")
-while not game.check_winner():
-    game.make_move(int(input(f'Какую позицию вы выбираете({game.current_player}): ')) - 1)
-    game.print_board()
+if __name__ == '__main__':
+    game = TicTacToe()
+    print('Игра: крестики нолики')
+    print('Перед вами поле 3*3, и номера позиций, выбирайте, первый ходит "X" ')
+    for index_g, el_g in enumerate(range(9)):
+        print(f'{el_g + 1}', end='|')
+        if index_g in (2, 5, 8):
+            print("\b")
+    while not game.check_winner():
+        game.make_move(int(input(f'Какую позицию вы выбираете({game.current_player}): ')) - 1)
+        game.print_board()
