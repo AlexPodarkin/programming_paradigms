@@ -36,11 +36,7 @@ class TicTacToe:
 if __name__ == '__main__':
     game = TicTacToe()
     print('Игра: крестики нолики')
-    print('Перед вами поле 3*3, и номера позиций, выбирайте, первый ходит "X" ')
-    for index_g, el_g in enumerate(range(9)):
-        print(f'{el_g + 1}', end='|')
-        if index_g in (2, 5, 8):
-            print("\b")
+    print('Перед вами поле 3*3, и номера позиций, выбирайте, первый ходит "X"\n1|2|3\n4|5|6\n7|8|9\n')
     while not game.check_winner():
         game.make_move(int(input(f'Какую позицию вы выбираете({game.current_player}): ')) - 1)
         game.print_board()
