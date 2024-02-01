@@ -1,24 +1,24 @@
-def binary_search(arr, number):
-    left = 0
-    right = len(arr) - 1
+def binary_search(arr, target):
+    low = 0
+    high = len(arr) - 1
 
-    while left <= right:
-        mid = (left + right) // 2
+    while low <= high:
+        mid = (low + high) // 2
+        mid_val = arr[mid]
 
-        if arr[mid] == number:
+        if mid_val == target:
             return mid
-        elif arr[mid] < number:
-            left = mid + 1
+        elif mid_val < target:
+            low = mid + 1
         else:
-            right = mid - 1
+            high = mid - 1
 
     return -1
 
 
 if __name__ == "__main__":
-
-    array = [150, 254, 452, 257, 257, 25, 15]
+    array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
     print(array)
     search_index = int(input("Введите искомый элемент: "))
     result = binary_search(array, search_index)
-    print(f"Индекс элемента(первого найденного): {result}")
+    print(f"Индекс элемента: {result}")
